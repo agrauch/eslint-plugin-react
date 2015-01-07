@@ -1,5 +1,5 @@
 /**
-* @fileoverview Tests for no-class-attribute rule.
+* @fileoverview Tests for no-props-without-proptypes rule.
 * @author Andrew Grauch
 */
 'use strict';
