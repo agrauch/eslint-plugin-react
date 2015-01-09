@@ -11,4 +11,4 @@ This plugin relys on the [es6jsx](https://github.com/eslint/eslint/tree/es6jsx) 
 * clone eslint@es6jsx with `git clone https://github.com/eslint/eslint --branch es6jsx --single-branch`
 * run `cd eslint && npm install && npm link eslint-plugin-react`
 
-HEAD of eslint@es6jsx has bug fixes for the no-unused-vars rule and does a better job of validating JSX than the version in the npm registry. With a clone of eslint, it is neccessary to link directly to this plugin. This will satisfy ESLink's plugin loading requirements.
+HEAD of eslint@es6jsx has bug fixes for the no-unused-vars rule and does a better job of validating JSX than the version in the npm registry. With a clone of eslint, it is neccessary to link directly to this plugin to satisfy ESLink's plugin loading requirements.
