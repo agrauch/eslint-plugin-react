@@ -13,12 +13,12 @@
     "lint": "eslint ."
   },
   "devDependencies": {
-    "eslint": "0.11.0-alpha.0",
-    "eslint-tester": "0.3.0",
+    "eslint": "git://github.com/eslint/eslint#master",
+    "eslint-tester": "git://github.com/eslint/eslint-tester#master",
     "mocha": "~2.1.0"
   },
   "peerDependencies": {
-    "eslint": "0.11.0-alpha.0"
+    "eslint": "git://github.com/eslint/eslint#master"
   },
   "keywords": [
     "eslint",

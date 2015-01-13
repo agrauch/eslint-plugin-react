@@ -20,11 +20,11 @@ eslintTester.addRuleTest('lib/rules/no-props-without-proptypes', {
   valid: [
     {
       code: 'React.createClass({ render: function() { return <div />} });',
-      settings: { ecmascript: 6, jsx: true }
+      ecmaFeatures: { jsx: true }
     },
     {
       code: 'React.createClass({ propTypes: {}, render: function() { return <div className={ this.props.className } />} });',
-      settings: { ecmascript: 6, jsx: true }
+      ecmaFeatures: { jsx: true }
     }
   ],
   invalid: [
@@ -34,7 +34,7 @@ eslintTester.addRuleTest('lib/rules/no-props-without-proptypes', {
         message: 'Do not use props without defining propTypes',
         type: 'MemberExpression'
       }],
-      settings: { ecmascript: 6, jsx: true }
+      ecmaFeatures: { jsx: true }
     }
   ]
 });

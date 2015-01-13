@@ -20,11 +20,11 @@ eslintTester.addRuleTest('lib/rules/no-strings-for-style-attribute', {
   valid: [
 {
   code: 'React.renderComponent(<div />);',
-  settings: { ecmascript: 6, jsx: true }
+  ecmaFeatures: { jsx: true }
 },
 {
   code: 'React.renderComponent(<div style={{display: "block"}} />);',
-  settings: { ecmascript: 6, jsx: true }
+  ecmaFeatures: { jsx: true }
 }
 ],
 invalid: [
@@ -32,9 +32,9 @@ invalid: [
   code: 'React.renderComponent(<div style="display: block" />);',
   errors: [{
     message: 'Use an oject for the style attribute rather than a string',
-    type: 'XJSAttribute'
+    type: 'JSXAttribute'
   }],
-  settings: { ecmascript: 6, jsx: true }
+  ecmaFeatures: { jsx: true }
 }
 ]
 });

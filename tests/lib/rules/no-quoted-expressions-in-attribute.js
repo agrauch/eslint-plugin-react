@@ -20,15 +20,15 @@ eslintTester.addRuleTest('lib/rules/no-quoted-expressions-in-attribute', {
   valid: [
     {
       code: 'React.renderComponent(<div />);',
-      settings: { ecmascript: 6, jsx: true }
+      ecmaFeatures: { jsx: true }
     },
     {
       code: 'React.renderComponent(<div className="ok" />);',
-      settings: { ecmascript: 6, jsx: true }
+      ecmaFeatures: { jsx: true }
     },
     {
       code: 'var ok = "ok"; React.renderComponent(<div className={ ok } />);',
-      settings: { ecmascript: 6, jsx: true }
+      ecmaFeatures: { jsx: true }
     }
   ],
   invalid: [
@@ -36,17 +36,17 @@ eslintTester.addRuleTest('lib/rules/no-quoted-expressions-in-attribute', {
       code: 'var ok = "ok"; React.renderComponent(<div className="{ ok } not-ok" />);',
       errors: [{
         message: 'Attribute values should not contain javascript expressions wrapped in quotes',
-        type: 'XJSAttribute'
+        type: 'JSXAttribute'
       }],
-      settings: { ecmascript: 6, jsx: true }
+      ecmaFeatures: { jsx: true }
     },
     {
       code: 'var notok = "not-ok"; React.renderComponent(<div className="{ notok }" />);',
       errors: [{
         message: 'Attribute values should not contain javascript expressions wrapped in quotes',
-        type: 'XJSAttribute'
+        type: 'JSXAttribute'
       }],
-      settings: { ecmascript: 6, jsx: true }
+      ecmaFeatures: { jsx: true }
     }
   ]
 });

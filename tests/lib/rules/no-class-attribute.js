@@ -20,11 +20,11 @@ eslintTester.addRuleTest('lib/rules/no-class-attribute', {
   valid: [
     {
       code: 'React.renderComponent(<div />);',
-      settings: { ecmascript: 6, jsx: true }
+      ecmaFeatures: { jsx: true }
     },
     {
       code: 'React.renderComponent(<div className="ok" />);',
-      settings: { ecmascript: 6, jsx: true }
+      ecmaFeatures: { jsx: true }
     }
   ],
   invalid: [
@@ -32,9 +32,9 @@ eslintTester.addRuleTest('lib/rules/no-class-attribute', {
       code: 'React.renderComponent(<div class="not-ok" />);',
       errors: [{
         message: 'Use className attribute rather than class',
-        type: 'XJSAttribute'
+        type: 'JSXAttribute'
       }],
-      settings: { ecmascript: 6, jsx: true }
+      ecmaFeatures: { jsx: true }
     }
   ]
 });
