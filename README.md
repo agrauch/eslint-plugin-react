@@ -3,7 +3,7 @@ eslint-plugin-react
 [ESLint](http://eslint.org) plugin to enforce [React](http://facebook.github.io/react/) best practices
 
 ###Caveat Emptor
-This plugin relys on ESLint [0.13.0](http://eslint.org/blog/2015/01/eslint-0.13.0-released/). As of this version, some ES6 syntax is not supported and will cause run-time errors.
+This plugin relys on ESLint [0.14.1](http://eslint.org/blog/2015/01/eslint-0.14.1-released/)
 
 ###Installation
 Add the this line to package.json in the project you wish to lint:
